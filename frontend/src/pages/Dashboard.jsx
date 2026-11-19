@@ -4,6 +4,7 @@ import {
   Calculator,
   Percent,
   FileCheck2,
+  Scale,
   ArrowRight,
   TrendingUp,
   Shield,
@@ -53,6 +54,16 @@ export default function Dashboard({ onNavigate }) {
       tagColor: 'text-blue-700 dark:text-blue-400 bg-blue-500/10 border-blue-500/20',
       actionText: 'Gerar DANFSe em PDF'
     },
+    {
+      id: 'balanco',
+      title: 'Balanço Patrimonial & Planilhas',
+      subtitle: 'Demonstrativos Anuais & Anexos',
+      desc: 'Realize o fechamento anual da empresa com planilhas de serviços (tomados/prestados), mercadorias, apuração tributária e anexos de página inteira.',
+      icon: Scale,
+      tag: 'Exercício Anual',
+      tagColor: 'text-purple-700 dark:text-purple-400 bg-purple-500/10 border-purple-500/20',
+      actionText: 'Abrir Balanço Patrimonial'
+    },
   ];
 
   return (
@@ -69,7 +80,7 @@ export default function Dashboard({ onNavigate }) {
             <span className="text-gold-400">SPED Fiscal & Reforma Tributária</span>
           </h1>
           <p className="text-sm sm:text-base text-slate-300 leading-relaxed mb-6">
-            Automatize a geração de arquivos EFD ICMS/IPI com o motor proprietário GeNnTXT e antecipe o impacto das novas regras da Lei Complementar nº 214/2025 para clientes do Regime Geral e do Simples Nacional.
+            Automatize a geração de arquivos EFD ICMS/IPI com o motor proprietário GeNnTXT, feche Balanços Patrimoniais anuais com planilhas detalhadas e antecipe o impacto das novas regras da Lei Complementar nº 214/2025.
           </p>
 
           <div className="flex flex-wrap gap-3">
@@ -81,11 +92,11 @@ export default function Dashboard({ onNavigate }) {
               <span>Acessar Gerador SPED</span>
             </button>
             <button
-              onClick={() => onNavigate('rtc_regular')}
+              onClick={() => onNavigate('balanco')}
               className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-lg bg-slate-800/80 hover:bg-slate-700/80 border border-slate-700 text-white font-semibold text-xs tracking-wider transition-all"
             >
-              <Calculator className="w-4 h-4 text-gold-400" />
-              <span>Simulador RTC (CBS/IBS)</span>
+              <Scale className="w-4 h-4 text-gold-400" />
+              <span>Balanço Patrimonial</span>
             </button>
           </div>
         </div>
@@ -107,7 +118,7 @@ export default function Dashboard({ onNavigate }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {cards.map((c) => {
             const Icon = c.icon;
             return (
@@ -178,7 +189,7 @@ export default function Dashboard({ onNavigate }) {
             </div>
             <div>
               <div className="text-xs font-bold text-slate-900 dark:text-white">Auditoria Local Segura</div>
-              <div className="text-[11px] text-slate-500 dark:text-slate-400">Processamento confidencial dos XMLs fiscais</div>
+              <div className="text-[11px] text-slate-500 dark:text-slate-400">Processamento confidencial dos XMLs e Balanços</div>
             </div>
           </div>
         </div>

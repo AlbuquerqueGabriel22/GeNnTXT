@@ -8,6 +8,7 @@ export default function Breadcrumb({ currentTab, onNavigate, subtitle }) {
     rtc_regular: 'Reforma Tributária: Regime Regular (CBS / IBS / IS)',
     rtc_simples: 'Reforma Tributária: Simples Nacional & Fator R',
     danfse: 'Gerador DANFSe Nacional (PDF)',
+    balanco: 'Balanço Patrimonial & Demonstrativos Anuais',
     settings: 'Perfil & Configurações de Sistema',
   };
 
@@ -16,7 +17,7 @@ export default function Breadcrumb({ currentTab, onNavigate, subtitle }) {
   }
 
   return (
-    <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-4 border-b border-slate-200 dark:border-obsidian-800">
+    <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pb-4 border-b border-slate-200 dark:border-obsidian-800 no-print">
       <div className="flex items-center space-x-2 text-sm text-slate-500 dark:text-slate-400">
         <button
           onClick={() => onNavigate('dashboard')}

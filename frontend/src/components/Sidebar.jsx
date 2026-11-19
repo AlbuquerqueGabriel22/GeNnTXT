@@ -5,6 +5,7 @@ import {
   Calculator,
   Percent,
   FileCheck2,
+  Scale,
   Settings,
   ChevronRight
 } from 'lucide-react';
@@ -47,6 +48,13 @@ export default function Sidebar({ activeTab, onNavigate }) {
       desc: 'Emissão e visualização de DANFSe nacional'
     },
     {
+      id: 'balanco',
+      label: 'Balanço Patrimonial',
+      badge: 'Anual',
+      icon: Scale,
+      desc: 'Fechamento anual, planilhas e anexos'
+    },
+    {
       id: 'settings',
       label: 'Perfil & Configurações',
       badge: 'Ajustes',
@@ -56,7 +64,7 @@ export default function Sidebar({ activeTab, onNavigate }) {
   ];
 
   return (
-    <aside className="w-full md:w-64 lg:w-72 flex-shrink-0">
+    <aside className="w-full md:w-64 lg:w-72 flex-shrink-0 no-print">
       <div className="bg-white dark:bg-obsidian-900 border border-slate-200 dark:border-obsidian-800 rounded-xl p-3 shadow-sm">
         <div className="px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
           Navegação Principal

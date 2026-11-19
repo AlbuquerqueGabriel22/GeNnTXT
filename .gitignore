@@ -1,0 +1,81 @@
+# ==========================================
+# GeNnTXT - Arquivos Ignorados pelo Git (.gitignore)
+# ==========================================
+
+# 1. Dependências do Node.js e Frontend
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 2. Python e Compilação
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+
+# 3. Arquivos Zip Grandes e Pacotes Originais
+*.zip
+calculadora-rtc-gerador-danfse-main.zip
+calculadora-rtc-regime-regular-main.zip
+calculadora-rtc-simples-nacional-main.zip
+Gerador-de-Speed-Fiscal-ICMS-main.zip
+
+# 4. Dados Fiscais Temporários e Confidenciais
+backend/uploads/*
+!backend/uploads/.gitkeep
+downloads/arquivos/*
+*.xml
+*.pdf
+*.txt
+*.csv
+
+# 5. Bancos de Dados Locais e SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# 6. Variáveis de Ambiente e Segredos
+.env
+.env.local
+.env.*.local
+*.local
+
+# 7. IDEs, Editores e Sistema Operacional
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini

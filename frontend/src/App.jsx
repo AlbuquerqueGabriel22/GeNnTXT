@@ -9,6 +9,7 @@ import SpedFiscalPage from './pages/SpedFiscalPage';
 import RtcRegularPage from './pages/RtcRegularPage';
 import RtcSimplesPage from './pages/RtcSimplesPage';
 import DanfsePage from './pages/DanfsePage';
+import BalancoPatrimonialPage from './pages/BalancoPatrimonialPage';
 import ProfileSettingsPage from './pages/ProfileSettingsPage';
 import LoginPage from './pages/LoginPage';
 
@@ -124,6 +125,10 @@ export default function App() {
               <DanfsePage />
             )}
 
+            {activeTab === 'balanco' && (
+              <BalancoPatrimonialPage />
+            )}
+
             {activeTab === 'settings' && (
               <ProfileSettingsPage
                 theme={theme}
@@ -138,12 +143,12 @@ export default function App() {
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-slate-200 dark:border-obsidian-800 bg-white/60 dark:bg-obsidian-950/60 py-4 mt-auto">
+      <footer className="border-t border-slate-200 dark:border-obsidian-800 bg-white/60 dark:bg-obsidian-950/60 py-4 mt-auto no-print">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-slate-500 dark:text-slate-400">
           <div className="flex items-center space-x-2">
             <span className="font-bold text-slate-700 dark:text-gold-400">GeNnTXT Cockpit Fiscal</span>
             <span>&bull;</span>
-            <span>Motor de Escrituração & Reforma Tributária (LC 214/2025)</span>
+            <span>Motor de Escrituração, Balanço & Reforma Tributária (LC 214/2025)</span>
           </div>
           <div>
             Desenvolvido para contadores e escritórios contábeis
